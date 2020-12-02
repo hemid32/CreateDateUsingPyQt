@@ -31,7 +31,6 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         self.crct1 = False
         self.crct2 = False
         self.crct3 = False
-        self.crct4 = False
 
 
 
@@ -81,13 +80,17 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         if (self.checkBox_8.isChecked()):
             self.crct2 = self.choi24.toPlainText()
         if (self.checkBox_9.isChecked()):
-            self.crct2 = self.choi31.toPlainText()
+            self.crct3 = self.choi31.toPlainText()
         if (self.checkBox_10.isChecked()):
-            self.crct2 = self.choi32.toPlainText()
+            self.crct3 = self.choi32.toPlainText()
         if (self.checkBox_11.isChecked()):
-            self.crct2 = self.choi33.toPlainText()
+            self.crct3 = self.choi33.toPlainText()
         if (self.checkBox_12.isChecked()):
-            self.crct2 = self.choi34.toPlainText()
+            self.crct3 = self.choi34.toPlainText()
+        if (self.crct1 != False and self.crct2 != False and self.crct3 != False) :
+            return  True
+        else :
+            return  False
 
     def databes(self):
         #self.dbe = mysql.connector.connect(host='localhost' , user='root', password='12345' ,db='mydb')
@@ -105,47 +108,69 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         for e in  data :
             print(e)
 
-
     def add_Date(self):
 
         #####################################add 2019 ##################"
-        file = ('data.db')
+        file = ('info2.db')
         self.conn = sqlite3.connect(file)
         self.cur = self.conn.cursor()
-        #############################################################"
 
-        sql = ''' SELECT * FROM parti1 '''
-        self.cur.execute(sql)
-        data = self.cur.fetchall()
-        i = 0
-        m = 0
+        self.cur.execute('''INSERT INTO  parti2(title , qst, point 
+        ,def11,def12,def13,def14,def15 , eq11,eq12,
+        eq13,eq14, eq15 , choi11,choi12,choi13,choi14,
+         crct1 ,def21,def22,def23,def24,eq21,eq22,eq23 , eq24,
+         choi21,choi22,choi23,choi24,crct2,
+                                          def31,def32,def33,def34,eq31,eq32,
+                                          eq33,eq34,choi31,choi32,choi33,choi34,crct3)
+                                          VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s'
+                                          ,'%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s',
+                                          '%s','%s','%s','%s','%s','%s','%s',
+                                          '%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s' )''' % (
+            'title' ,  'qst' , 'point' ,
+            self.def11.toPlainText() , self.def12.toPlainText() ,self.def13.toPlainText() , self.def14.toPlainText() ,'def15',
+            self.eq11.toPlainText(), self.eq12.toPlainText(), self.eq13.toPlainText(), self.eq14.toPlainText(), 'eq15' ,
+
+            self.choi11.toPlainText() ,  self.choi12.toPlainText() ,  self.choi13.toPlainText() ,
+            self.choi14.toPlainText(),self.crct1 ,
+            self.def21.toPlainText(), self.def22.toPlainText(), self.def23.toPlainText(), self.def24.toPlainText(),
+            self.eq21.toPlainText(), self.eq22.toPlainText(), self.eq23.toPlainText(),
+            self.eq24.toPlainText(),
+
+            self.choi21.toPlainText(), self.choi22.toPlainText(), self.choi23.toPlainText(),
+            self.choi24.toPlainText(), self.crct2,
+            self.def31.toPlainText(), self.def32.toPlainText(), self.def33.toPlainText(), self.def34.toPlainText(),
+            self.eq31.toPlainText(), self.eq32.toPlainText(), self.eq33.toPlainText(),
+            self.eq34.toPlainText(),
+
+            self.choi31.toPlainText(), self.choi32.toPlainText(), self.choi33.toPlainText(),
+            self.choi34.toPlainText(), self.crct3
 
 
-
-        """
-        self.cur.execute('''INSERT INTO 
-                                          parti1(line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,line14,line15,line16,line17,line18,line19,line20,line21,line22,line23,line24,line25,line26,line27,line29,line30,line31,line32,line33,line34,line35,line36,line37,line38,line39,line40,line41,
-                                          L7_0 , L7_1 , L7_2 , L7_3 , L7_4 , L7_5 ,L7_6  , L7_7 , L7_8 , L7_9 , L8_0 , L8_1 , L8_2 , L8_3 , L8_4 , L8_5 , L8_6 , L8_7 , L8_8 , L8_9)
-                                          VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s' )''' % ())
+        ))
         self.conn.commit()
-        m = self.line30.text()
-        self.comboBox.addItem(m)
-        Qt.QMessageBox.information(self, u'صحيت', u'تم اضافة الدولة الي قاعدة البايانات بنجاح')
-        """
+        Qt.QMessageBox.information(self, u'صحيت', u'تم اضافة البيانات')
+
 
     def bottun(self):
-        self.pushButton.clicked.connect(self.prints)
+        self.pushButton.clicked.connect(self.Button_OK)
 
-    def prints(self):
+    def Button_OK(self):
         print('text')
         #self.validati_form_chois()
-        self.choi_correct()
+        if(self.validati_form_chois()) :
+            if (self.choi_correct()) :
+                self.add_Date()
+                print('crct1 = ' , self.crct1)
+                print('crct2 = ' , self.crct2)
+                print('crct3 = ' , self.crct3)
+        else :
+            self.Dilog_erurr()
 
 
 
-    def save_fille(self):
 
-        Qt.QMessageBox.information(self, u'صحيت', u'تم')
+    def Dilog_erurr(self):
+        Qt.QMessageBox.information(self, u'نسييت واحد فارغ', u'نسيت فراغ')
         #pass
 
 
