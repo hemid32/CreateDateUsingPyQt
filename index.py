@@ -31,6 +31,12 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         self.crct1 = False
         self.crct2 = False
         self.crct3 = False
+        self.img1_var = ' '
+        self.img2_var = ' '
+        self.img3_var = ' '
+
+
+
 
 
 
@@ -121,12 +127,12 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
          crct1 ,def21,def22,def23,def24,eq21,eq22,eq23 , eq24,
          choi21,choi22,choi23,choi24,crct2,
                                           def31,def32,def33,def34,eq31,eq32,
-                                          eq33,eq34,choi31,choi32,choi33,choi34,crct3)
+                                          eq33,eq34,choi31,choi32,choi33,choi34,crct3 , img1 , img2 , img3)
                                           VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s'
                                           ,'%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s',
                                           '%s','%s','%s','%s','%s','%s','%s',
-                                          '%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s' )''' % (
-            'title' ,  'qst' , 'point' ,
+                                          '%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s' )''' % (
+            self.titre.toPlainText() ,  'qst' , 'point' ,
             self.def11.toPlainText() , self.def12.toPlainText() ,self.def13.toPlainText() , self.def14.toPlainText() ,'def15',
             self.eq11.toPlainText(), self.eq12.toPlainText(), self.eq13.toPlainText(), self.eq14.toPlainText(), 'eq15' ,
 
@@ -143,16 +149,44 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
             self.eq34.toPlainText(),
 
             self.choi31.toPlainText(), self.choi32.toPlainText(), self.choi33.toPlainText(),
-            self.choi34.toPlainText(), self.crct3
+            self.choi34.toPlainText(), self.crct3 , self.img1_var , self.img2_var , self.img3_var
 
 
         ))
         self.conn.commit()
         Qt.QMessageBox.information(self, u'صحيت', u'تم اضافة البيانات')
 
+    def open_img_1(self):
+        save__ =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
+        name = save__.split('/')
+        self.img1.setText(name[-1])
+        self.img1_var = name[-1]
+        #find = str(save__).find('/' , len(save__))
+        #print(find)
+    def open_img_2(self):
+        save__ =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
+        name = save__.split('/')
+        self.img2.setText(name[-1])
+        self.img2_var = name[-1]
+
+        #find = str(save__).find('/' , len(save__))
+        #print(find)
+    def open_img_3(self):
+        save__ =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
+        name = save__.split('/')
+        self.img3.setText(name[-1])
+        self.img3_var = name[-1]
+
+        #find = str(save__).find('/' , len(save__))
+        #print(find)
+
+
 
     def bottun(self):
         self.pushButton.clicked.connect(self.Button_OK)
+        self.imgBtn1.clicked.connect(self.open_img_1)
+        self.imgBtn2.clicked.connect(self.open_img_2)
+        self.imgBtn3.clicked.connect(self.open_img_3)
 
     def Button_OK(self):
         print('text')
