@@ -14,50 +14,10 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTextEdit" name="choi11">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>440</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="choi12">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>490</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="choi13">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>540</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="choi14">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>580</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>410</x>
       <y>630</y>
       <width>181</width>
       <height>31</height>
@@ -67,91 +27,11 @@
      <string>add</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="choi24">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>580</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="choi21">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>440</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="choi22">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>490</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="choi23">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>540</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="choi34">
-    <property name="geometry">
-     <rect>
-      <x>760</x>
-      <y>590</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="choi31">
-    <property name="geometry">
-     <rect>
-      <x>760</x>
-      <y>440</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="choi32">
-    <property name="geometry">
-     <rect>
-      <x>760</x>
-      <y>490</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="choi33">
-    <property name="geometry">
-     <rect>
-      <x>760</x>
-      <y>540</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QTextEdit" name="def11">
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>80</y>
+      <y>140</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -161,7 +41,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>120</y>
+      <y>180</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -181,7 +61,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>200</y>
+      <y>260</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -194,7 +74,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>160</y>
+      <y>220</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -204,7 +84,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>240</y>
+      <y>300</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -214,7 +94,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>280</y>
+      <y>340</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -227,7 +107,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>360</y>
+      <y>420</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -240,7 +120,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>320</y>
+      <y>380</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -249,8 +129,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="def22">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>160</y>
+      <x>380</x>
+      <y>220</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -259,8 +139,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="eq22">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>200</y>
+      <x>380</x>
+      <y>260</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -272,8 +152,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="def24">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>320</y>
+      <x>380</x>
+      <y>380</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -282,8 +162,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="eq21">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>120</y>
+      <x>380</x>
+      <y>180</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -302,8 +182,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="eq24">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>360</y>
+      <x>380</x>
+      <y>420</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -315,8 +195,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="def23">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>240</y>
+      <x>380</x>
+      <y>300</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -325,8 +205,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="eq23">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>280</y>
+      <x>380</x>
+      <y>340</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -338,8 +218,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="def21">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>80</y>
+      <x>380</x>
+      <y>140</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -348,8 +228,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="def32">
     <property name="geometry">
      <rect>
-      <x>740</x>
-      <y>160</y>
+      <x>720</x>
+      <y>220</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -358,8 +238,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="def34">
     <property name="geometry">
      <rect>
-      <x>740</x>
-      <y>320</y>
+      <x>720</x>
+      <y>380</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -368,8 +248,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="eq33">
     <property name="geometry">
      <rect>
-      <x>740</x>
-      <y>280</y>
+      <x>720</x>
+      <y>340</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -381,8 +261,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="eq34">
     <property name="geometry">
      <rect>
-      <x>740</x>
-      <y>360</y>
+      <x>720</x>
+      <y>420</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -394,8 +274,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="eq32">
     <property name="geometry">
      <rect>
-      <x>740</x>
-      <y>200</y>
+      <x>720</x>
+      <y>260</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -407,8 +287,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="def31">
     <property name="geometry">
      <rect>
-      <x>740</x>
-      <y>80</y>
+      <x>720</x>
+      <y>140</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -417,8 +297,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="eq31">
     <property name="geometry">
      <rect>
-      <x>740</x>
-      <y>120</y>
+      <x>720</x>
+      <y>180</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -437,167 +317,11 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="def33">
     <property name="geometry">
      <rect>
-      <x>740</x>
-      <y>240</y>
+      <x>720</x>
+      <y>300</y>
       <width>251</width>
       <height>41</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>450</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_2">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>500</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_3">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>540</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_4">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>580</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_5">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>450</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_6">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>490</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_7">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>540</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_8">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>590</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_9">
-    <property name="geometry">
-     <rect>
-      <x>730</x>
-      <y>450</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_10">
-    <property name="geometry">
-     <rect>
-      <x>730</x>
-      <y>500</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_11">
-    <property name="geometry">
-     <rect>
-      <x>730</x>
-      <y>550</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_12">
-    <property name="geometry">
-     <rect>
-      <x>730</x>
-      <y>600</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
     </property>
    </widget>
    <widget class="QTextEdit" name="titre">
@@ -613,21 +337,21 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>325</x>
       <y>30</y>
-      <width>46</width>
-      <height>13</height>
+      <width>61</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>titre</string>
+     <string>titre Cours</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="img1">
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>410</y>
+      <y>600</y>
       <width>201</width>
       <height>21</height>
      </rect>
@@ -636,8 +360,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="img2">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>410</y>
+      <x>440</x>
+      <y>590</y>
       <width>201</width>
       <height>21</height>
      </rect>
@@ -646,8 +370,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="img3">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>410</y>
+      <x>780</x>
+      <y>590</y>
       <width>201</width>
       <height>21</height>
      </rect>
@@ -656,8 +380,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="imgBtn1">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>410</y>
+      <x>30</x>
+      <y>600</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -669,8 +393,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="imgBtn3">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>410</y>
+      <x>700</x>
+      <y>590</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -682,8 +406,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="imgBtn2">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>410</y>
+      <x>360</x>
+      <y>590</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -692,11 +416,149 @@ p, li { white-space: pre-wrap; }
      <string>PushButton</string>
     </property>
    </widget>
+   <widget class="QTextEdit" name="def15">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>460</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="eq15">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>500</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="def25">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>460</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="eq25">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>500</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="def35">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>460</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="eq35">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>500</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="titrep1">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>90</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>46</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>titrep</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="titrep2">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>90</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>100</y>
+      <width>46</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>titrep</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>100</y>
+      <width>46</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>titrep</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="titrep3">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>90</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
    <widget class="QLCDNumber" name="lcdNumber">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>10</y>
+      <x>150</x>
+      <y>20</y>
       <width>64</width>
       <height>23</height>
      </rect>
