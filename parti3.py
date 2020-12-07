@@ -1,28 +1,22 @@
 #-*- coding: UTF-8 -*-
-
-from PyQt4 import uic
+from PyQt5 import uic
 import sqlite3
 
 qtCreatorFile = "untitledparti3.ui"  # Enter file here.
 
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 
 import sys
-from PyQt4 import QtCore, QtGui, uic , Qt
-from PyQt4.QtGui import QApplication, QCompleter, QLineEdit, QStringListModel
+from PyQt5 import QtCore, QtGui, uic , Qt , QtWidgets
+from PyQt5.QtGui import * #QApplication, QCompleter, QLineEdit, QStringListModel
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
 
-class MyApp(QtGui.QMainWindow, Ui_MainWindow):
+class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self  ):
-        QtGui.QMainWindow.__init__(self)
+        QtWidgets.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
         self.var = 10
         self.setupUi(self)
@@ -101,7 +95,7 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
 
 
 if __name__ == "__main__":
-    app = QtGui.QApplication(sys.argv)
+    app = QtWidgets.QApplication(sys.argv)
     window = MyApp()
     window.show()
     sys.exit(app.exec_())
