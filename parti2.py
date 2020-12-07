@@ -40,8 +40,13 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         if(text == '') :
             return  text
         else :
+            if ('**' in text ) :
+                t = text.replace('**' , '')
+                h = '\\text' + '{' + t + '}'
+                text = h
+
             #text = '$$' + text + '$$'
-            return text
+        return text
 
     def validati_form_chois(self):
         if (self.choi11.toPlainText() == '') :

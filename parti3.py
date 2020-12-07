@@ -38,7 +38,12 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         if (text == ''):
             return text
         else:
-            text = '$$' + text + '$$'
+            if ('**' in text) :
+                t = text.replace('**' , '')
+                h = '\\text' + '{'  + t + '}'
+            else :
+                h = text
+            text = '$$' + h + '$$'
             return text
 
 
@@ -56,12 +61,12 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
                                            ,'%s','%s','%s','%s','%s','%s','%s')''' % (
             self.titre.toPlainText() , ' ' , ' ',
             self.def11.toPlainText() , self.def12.toPlainText() ,self.def13.toPlainText() , self.def14.toPlainText() ,self.def15.toPlainText(),
-            self.eq11.toPlainText(), self.eq12.toPlainText(), self.eq13.toPlainText(), self.eq14.toPlainText(),
-            self.eq15.toPlainText() , self.img1_var  , self.qst1.toPlainText() ,self.aid1.toPlainText() , self.crr1.toPlainText()
-            , self.qst2.toPlainText(), self.aid2.toPlainText(), self.crr2.toPlainText()
-            , self.qst3.toPlainText(), self.aid3.toPlainText(), self.crr3.toPlainText()
-            , self.qst4.toPlainText(), self.aid4.toPlainText(), self.crr4.toPlainText()
-            , self.qst5.toPlainText(), self.aid5.toPlainText(), self.crr5.toPlainText()
+            self.Recouver_Latex(self.eq11.toPlainText()), self.Recouver_Latex(self.eq12.toPlainText()), self.Recouver_Latex(self.eq13.toPlainText()), self.Recouver_Latex(self.eq14.toPlainText()),
+            self.Recouver_Latex(self.eq15.toPlainText()) , self.img1_var  , self.qst1.toPlainText() ,self.Recouver_Latex(self.aid1.toPlainText()) , self.crr1.toPlainText()
+            , self.qst2.toPlainText(), self.Recouver_Latex(self.aid2.toPlainText()), self.crr2.toPlainText()
+            , self.qst3.toPlainText(), self.Recouver_Latex(self.aid3.toPlainText()), self.crr3.toPlainText()
+            , self.qst4.toPlainText(), self.Recouver_Latex(self.aid4.toPlainText()), self.crr4.toPlainText()
+            , self.qst5.toPlainText(), self.Recouver_Latex(self.aid5.toPlainText()), self.crr5.toPlainText()
         )
         )
         self.conn.commit()
