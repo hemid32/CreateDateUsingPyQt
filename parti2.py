@@ -40,7 +40,7 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         if(text == '') :
             return  text
         else :
-            text = '$$' + text + '$$'
+            #text = '$$' + text + '$$'
             return text
 
     def validati_form_chois(self):

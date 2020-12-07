@@ -47,15 +47,22 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         file = ('info2.db')
         self.conn = sqlite3.connect(file)
         self.cur = self.conn.cursor()
-        self.cur.execute('''INSERT INTO  parti3(title , qst ,crr ,point , methode 
+        self.cur.execute('''INSERT INTO  parti3(title  ,point , methode 
         ,def11,def12,def13,def14,def15 , eq11,eq12,
-        eq13,eq14, eq15 , img)
+        eq13,eq14, eq15 , img  , qst1 , aid1 , crr1 ,  qst2 , aid2 , crr2, qst3 , aid3 , crr3 , qst4 , aid4 , crr4 
+        , qst5 , aid5 , crr5)
                                           VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s'
-                                          ,'%s','%s','%s','%s','%s','%s' )''' % (
-            self.titre.toPlainText() , ' ' , self.crr.toPlainText() , ' ' , ' ' ,
+                                          ,'%s','%s','%s','%s','%s','%s' ,'%s','%s','%s','%s','%s','%s'
+                                           ,'%s','%s','%s','%s','%s','%s','%s')''' % (
+            self.titre.toPlainText() , ' ' , ' ',
             self.def11.toPlainText() , self.def12.toPlainText() ,self.def13.toPlainText() , self.def14.toPlainText() ,self.def15.toPlainText(),
             self.eq11.toPlainText(), self.eq12.toPlainText(), self.eq13.toPlainText(), self.eq14.toPlainText(),
-            self.eq15.toPlainText() , self.img1_var)
+            self.eq15.toPlainText() , self.img1_var  , self.qst1.toPlainText() ,self.aid1.toPlainText() , self.crr1.toPlainText()
+            , self.qst2.toPlainText(), self.aid2.toPlainText(), self.crr2.toPlainText()
+            , self.qst3.toPlainText(), self.aid3.toPlainText(), self.crr3.toPlainText()
+            , self.qst4.toPlainText(), self.aid4.toPlainText(), self.crr4.toPlainText()
+            , self.qst5.toPlainText(), self.aid5.toPlainText(), self.crr5.toPlainText()
+        )
         )
         self.conn.commit()
         Qt.QMessageBox.information(self, u'صحيت', u'تم اضافة البيانات')
