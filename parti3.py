@@ -27,10 +27,11 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.img1_var = ' '
         self.img2_var = ' '
         self.img3_var = ' '
+        self.databes()
 
     def NewLine(self, text):
         if ('#' in text):
-            text.replace('#', '\\\\')
+            text  = text.replace('#', '\\\\')
 
         return text
 
@@ -98,6 +99,23 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def Dilog_erurr(self):
         Qt.QMessageBox.information(self, u'نسييت واحد فارغ', u'نسيت فراغ')
         #pass
+
+
+    def databes(self):
+        #self.dbe = mysql.connector.connect(host='localhost' , user='root', password='12345' ,db='mydb')
+        #self.cur = self.dbe.cursor()
+
+        ######
+        file = ('info2.db')
+        self.conn = sqlite3.connect(file)
+        self.cur =  self.conn.cursor()
+
+        sql = ''' SELECT * FROM parti2 '''
+
+        self.cur.execute(sql)
+        data = self.cur.fetchall()
+        print(len(data))
+        self.lcdNumber.display(len(data))
 
 
 if __name__ == "__main__":

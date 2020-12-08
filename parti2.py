@@ -34,7 +34,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def NewLine(self , text):
         if('#' in text):
-            text.replace('#' , '\\\\')
+            text =  text.replace('#' , '\\\\')
 
         return  text
 
@@ -125,6 +125,13 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         print(len(data))
         self.lcdNumber.display(len(data))
 
+    def Recouver_LatexEq(self, text):
+        if (text == ''):
+            return text
+        else:
+            text = '$$' + text + '$$'
+            return self.NewLine(text)
+
 
     def add_Date(self):
 
@@ -145,20 +152,20 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                                           '%s','%s','%s','%s','%s','%s','%s',
                                           '%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s' )''' % (
             self.titre.toPlainText() ,  'qst' , 'point' ,
-            self.def11.toPlainText() , self.def12.toPlainText() ,self.def13.toPlainText() , self.def14.toPlainText() ,'def15',
-            self.Recouver_Latex(self.eq11.toPlainText()), self.Recouver_Latex(self.eq12.toPlainText()), self.Recouver_Latex(self.eq13.toPlainText()), self.Recouver_Latex(self.eq14.toPlainText()), ' ' ,
+            self.def11.toPlainText() , self.def12.toPlainText() ,self.def13.toPlainText() , self.def14.toPlainText() ,' ',
+            self.Recouver_LatexEq(self.eq11.toPlainText()), self.Recouver_LatexEq(self.eq12.toPlainText()), self.Recouver_LatexEq(self.eq13.toPlainText()), self.Recouver_LatexEq(self.eq14.toPlainText()), ' ' ,
 
             self.Recouver_Latex(self.choi11.toPlainText()) ,  self.Recouver_Latex(self.choi12.toPlainText()) ,  self.Recouver_Latex(self.choi13.toPlainText()) ,
             self.Recouver_Latex(self.choi14.toPlainText()),self.Recouver_Latex(self.crct1) ,
             self.def21.toPlainText(), self.def22.toPlainText(), self.def23.toPlainText(), self.def24.toPlainText(),
-            self.Recouver_Latex(self.eq21.toPlainText()), self.Recouver_Latex(self.eq22.toPlainText()), self.Recouver_Latex(self.eq23.toPlainText()),
-            self.Recouver_Latex(self.eq24.toPlainText()),
+            self.Recouver_LatexEq(self.eq21.toPlainText()), self.Recouver_LatexEq(self.eq22.toPlainText()), self.Recouver_LatexEq(self.eq23.toPlainText()),
+            self.Recouver_LatexEq(self.eq24.toPlainText()),
 
             self.Recouver_Latex(self.choi21.toPlainText()), self.Recouver_Latex(self.choi22.toPlainText()), self.Recouver_Latex(self.choi23.toPlainText()),
             self.Recouver_Latex(self.choi24.toPlainText()), self.Recouver_Latex(self.crct2),
             self.def31.toPlainText(), self.def32.toPlainText(), self.def33.toPlainText(), self.def34.toPlainText(),
-            self.Recouver_Latex(self.eq31.toPlainText()), self.Recouver_Latex(self.eq32.toPlainText()), self.Recouver_Latex(self.eq33.toPlainText()),
-            self.Recouver_Latex(self.eq34.toPlainText()),
+            self.Recouver_LatexEq(self.eq31.toPlainText()), self.Recouver_LatexEq(self.eq32.toPlainText()), self.Recouver_LatexEq(self.eq33.toPlainText()),
+            self.Recouver_LatexEq(self.eq34.toPlainText()),
 
             self.Recouver_Latex(self.choi31.toPlainText()), self.Recouver_Latex(self.choi32.toPlainText()), self.Recouver_Latex(self.choi33.toPlainText()),
             self.Recouver_Latex(self.choi34.toPlainText()), self.Recouver_Latex(self.crct3) , self.img1_var , self.img2_var , self.img3_var

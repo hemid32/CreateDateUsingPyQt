@@ -51,7 +51,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def NewLine(self, text):
         if ('#' in text):
-            text.replace('#', '\\\\')
+            text =  text.replace('#', '\\\\')
 
         return text
 

@@ -505,7 +505,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="text">
-     <string>titrep</string>
+     <string>titrep1</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="titrep2">
@@ -528,7 +528,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="text">
-     <string>titrep</string>
+     <string>titrep2</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -541,7 +541,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="text">
-     <string>titrep</string>
+     <string>titrep3</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="titrep3">
