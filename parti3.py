@@ -110,7 +110,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.conn = sqlite3.connect(file)
         self.cur =  self.conn.cursor()
 
-        sql = ''' SELECT * FROM parti2 '''
+        sql = ''' SELECT * FROM parti3 '''
 
         self.cur.execute(sql)
         data = self.cur.fetchall()
