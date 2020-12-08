@@ -28,6 +28,12 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.img2_var = ' '
         self.img3_var = ' '
 
+    def NewLine(self, text):
+        if ('#' in text):
+            text.replace('#', '\\\\')
+
+        return text
+
     def Recouver_Latex(self, text):
         if (text == ''):
             return text
@@ -38,7 +44,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             else :
                 h = text
             text = '$$' + h + '$$'
-            return text
+            return self.NewLine(text)
 
 
     def add_Date(self):

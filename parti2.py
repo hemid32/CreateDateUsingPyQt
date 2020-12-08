@@ -31,6 +31,14 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.img3_var = ' '
         self.databes()
 
+
+    def NewLine(self , text):
+        if('#' in text):
+            text.replace('#' , '\\\\')
+
+        return  text
+
+
     def Recouver_Latex(self, text):
         if(text == '') :
             return  text
@@ -41,7 +49,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                 text = h
 
             #text = '$$' + text + '$$'
-        return text
+        return self.NewLine(text)
 
     def validati_form_chois(self):
         if (self.choi11.toPlainText() == '') :

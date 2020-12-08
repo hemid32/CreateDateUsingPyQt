@@ -48,12 +48,19 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         print(len(data))
         self.lcdNumber.display(len(data))
 
+
+    def NewLine(self, text):
+        if ('#' in text):
+            text.replace('#', '\\\\')
+
+        return text
+
     def Recouver_Latex(self, text):
         if (text == ''):
             return text
         else:
             text = '$$' + text + '$$'
-            return text
+            return self.NewLine(text)
 
 
     def add_Date(self):
