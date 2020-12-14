@@ -95,23 +95,23 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         Qt.QMessageBox.information(self, u'صحيت', u'تم اضافة البيانات')
 
     def open_img_1(self):
-        save__ =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
-        name = save__.split('/')
+        save =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
+        name = save[0].split('/')
         self.img1.setText(name[-1])
         self.img1_var = name[-1]
         #find = str(save__).find('/' , len(save__))
         #print(find)
     def open_img_2(self):
-        save__ =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
-        name = save__.split('/')
+        save =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
+        name = save[0].split('/')
         self.img2.setText(name[-1])
         self.img2_var = name[-1]
 
         #find = str(save__).find('/' , len(save__))
         #print(find)
     def open_img_3(self):
-        save__ =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
-        name = save__.split('/')
+        save =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
+        name = save[0].split('/')
         self.img3.setText(name[-1])
         self.img3_var = name[-1]
 
@@ -136,7 +136,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 
 
     def Dilog_erurr(self):
-        Qt.QMessageBox.information(self, u'نسييت واحد فارغ', u'نسيت فراغ')
+        Qt.QMessageBox.warning(self, u'نسييت واحد فارغ', u'نسيت فراغ')
         #pass
 
 

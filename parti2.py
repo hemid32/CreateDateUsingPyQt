@@ -146,11 +146,11 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
          crct1 ,def21,def22,def23,def24,eq21,eq22,eq23 , eq24,
          choi21,choi22,choi23,choi24,crct2,
                                           def31,def32,def33,def34,eq31,eq32,
-                                          eq33,eq34,choi31,choi32,choi33,choi34,crct3 , img1 , img2 , img3)
+                                          eq33,eq34,choi31,choi32,choi33,choi34,crct3 , img1 , img2 , img3 , times  )
                                           VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s'
                                           ,'%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s',
                                           '%s','%s','%s','%s','%s','%s','%s',
-                                          '%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s' )''' % (
+                                          '%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s' , %s )''' % (
             self.titre.toPlainText() ,  'qst' , 'point' ,
             self.def11.toPlainText() , self.def12.toPlainText() ,self.def13.toPlainText() , self.def14.toPlainText() ,' ',
             self.Recouver_LatexEq(self.eq11.toPlainText()), self.Recouver_LatexEq(self.eq12.toPlainText()), self.Recouver_LatexEq(self.eq13.toPlainText()), self.Recouver_LatexEq(self.eq14.toPlainText()), ' ' ,
@@ -168,7 +168,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             self.Recouver_LatexEq(self.eq34.toPlainText()),
 
             self.Recouver_Latex(self.choi31.toPlainText()), self.Recouver_Latex(self.choi32.toPlainText()), self.Recouver_Latex(self.choi33.toPlainText()),
-            self.Recouver_Latex(self.choi34.toPlainText()), self.Recouver_Latex(self.crct3) , self.img1_var , self.img2_var , self.img3_var
+            self.Recouver_Latex(self.choi34.toPlainText()), self.Recouver_Latex(self.crct3) , self.img1_var , self.img2_var , self.img3_var , int(self.time.toPlainText())
 
 
         ))
@@ -176,23 +176,23 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         Qt.QMessageBox.information(self, u'صحيت', u'تم اضافة البيانات')
 
     def open_img_1(self):
-        save__ =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
-        name = save__.split('/')
+        save =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
+        name = save[0].split('/')
         self.img1.setText(name[-1])
         self.img1_var = name[-1]
         #find = str(save__).find('/' , len(save__))
         #print(find)
     def open_img_2(self):
-        save__ =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
-        name = save__.split('/')
+        save =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
+        name = save[0].split('/')
         self.img2.setText(name[-1])
         self.img2_var = name[-1]
 
         #find = str(save__).find('/' , len(save__))
         #print(find)
     def open_img_3(self):
-        save__ =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
-        name = save__.split('/')
+        save =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
+        name = save[0].split('/')
         self.img3.setText(name[-1])
         self.img3_var = name[-1]
 
@@ -210,7 +210,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def Button_OK(self):
         print('text')
         #self.validati_form_chois()
-        if(self.validati_form_chois()) :
+        if(self.validati_form_chois() and self.time.toPlainText() != '') :
             if (self.choi_correct()) :
                 self.add_Date()
                 print('crct1 = ' , self.crct1)
@@ -223,7 +223,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 
 
     def Dilog_erurr(self):
-        Qt.QMessageBox.information(self, u'نسييت واحد فارغ', u'نسيت فراغ')
+        Qt.QMessageBox.warning(self, u'حطأ', u'نسيت فراغ')
         #pass
 
 

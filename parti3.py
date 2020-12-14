@@ -56,10 +56,10 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.cur.execute('''INSERT INTO  parti3(title  ,point , methode 
         ,def11,def12,def13,def14,def15 , eq11,eq12,
         eq13,eq14, eq15 , img  , qst1 , aid1 , crr1 ,  qst2 , aid2 , crr2, qst3 , aid3 , crr3 , qst4 , aid4 , crr4 
-        , qst5 , aid5 , crr5)
+        , qst5 , aid5 , crr5 , times)
                                           VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s'
                                           ,'%s','%s','%s','%s','%s','%s' ,'%s','%s','%s','%s','%s','%s'
-                                           ,'%s','%s','%s','%s','%s','%s','%s')''' % (
+                                           ,'%s','%s','%s','%s','%s','%s','%s' , %s )''' % (
             self.titre.toPlainText() , ' ' , ' ',
             self.def11.toPlainText() , self.def12.toPlainText() ,self.def13.toPlainText() , self.def14.toPlainText() ,self.def15.toPlainText(),
             self.Recouver_Latex(self.eq11.toPlainText()), self.Recouver_Latex(self.eq12.toPlainText()), self.Recouver_Latex(self.eq13.toPlainText()), self.Recouver_Latex(self.eq14.toPlainText()),
@@ -68,14 +68,16 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             , self.qst3.toPlainText(), self.Recouver_Latex(self.aid3.toPlainText()), self.crr3.toPlainText()
             , self.qst4.toPlainText(), self.Recouver_Latex(self.aid4.toPlainText()), self.crr4.toPlainText()
             , self.qst5.toPlainText(), self.Recouver_Latex(self.aid5.toPlainText()), self.crr5.toPlainText()
+            , int(self.time.toPlainText())
         )
         )
         self.conn.commit()
         Qt.QMessageBox.information(self, u'صحيت', u'تم اضافة البيانات')
 
     def open_img_1(self):
-        save__ =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
-        name = save__.split('/')
+        save =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
+        name = save[0].split('/')
+        print(name)
         self.img1.setText(name[-1])
         self.img1_var = name[-1]
         #find = str(save__).find('/' , len(save__))
@@ -90,14 +92,18 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def Button_OK(self):
         print('text')
         #self.validati_form_chois()
-        self.add_Date()
+        if(self.time.toPlainText() != '') :
+            self.add_Date()
+        else :
+            Qt.QMessageBox.warning(self, u'خطأ', u'نسيت فراغ')
+
 
 
 
 
 
     def Dilog_erurr(self):
-        Qt.QMessageBox.information(self, u'نسييت واحد فارغ', u'نسيت فراغ')
+        Qt.QMessageBox.warning(self, u'نسييت واحد فارغ', u'نسيت فراغ')
         #pass
 
 
