@@ -168,7 +168,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             self.Recouver_LatexEq(self.eq34.toPlainText()),
 
             self.Recouver_Latex(self.choi31.toPlainText()), self.Recouver_Latex(self.choi32.toPlainText()), self.Recouver_Latex(self.choi33.toPlainText()),
-            self.Recouver_Latex(self.choi34.toPlainText()), self.Recouver_Latex(self.crct3) , self.img1_var , self.img2_var , self.img3_var , int(self.time.toPlainText())
+            self.Recouver_Latex(self.choi34.toPlainText()), self.Recouver_Latex(self.crct3) , self.img1.toPlainText() , self.img2.toPlainText() , self.img3.toPlainText() , int(self.time.toPlainText())
 
 
         ))

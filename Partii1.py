@@ -89,7 +89,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             self.titrep3.toPlainText() ,
             self.def31.toPlainText(), self.def32.toPlainText(), self.def33.toPlainText(), self.def34.toPlainText(),self.def35.toPlainText(),
             self.Recouver_Latex(self.eq31.toPlainText()), self.Recouver_Latex(self.eq32.toPlainText()), self.Recouver_Latex(self.eq33.toPlainText()),
-            self.Recouver_Latex(self.eq34.toPlainText()),  self.Recouver_Latex(self.eq35.toPlainText()), self.img1_var , self.img2_var , self.img3_var
+            self.Recouver_Latex(self.eq34.toPlainText()),  self.Recouver_Latex(self.eq35.toPlainText()), self.img1.toPlainText() , self.img2.toPlainText() , self.img3.toPlainText()
         ))
         self.conn.commit()
         Qt.QMessageBox.information(self, u'صحيت', u'تم اضافة البيانات')
