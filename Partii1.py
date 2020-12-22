@@ -47,6 +47,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         data = self.cur.fetchall()
         print(len(data))
         self.lcdNumber.display(len(data))
+        self.conn.close()
 
 
     def NewLine(self, text):
@@ -64,35 +65,45 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 
 
     def add_Date(self):
+        print(self.def11.toPlainText())
         #####################################add 2019 ##################"
-        file = ('info2.db')
-        self.conn = sqlite3.connect(file)
-        self.cur = self.conn.cursor()
-        self.cur.execute('''INSERT INTO  parti1(title , titleP1
-        ,def11,def12,def13,def14,def15 , eq11,eq12,
-        eq13,eq14, eq15 , titleP2 , def21,def22,def23,def24,def25 ,  eq21,eq22,
-        eq23,eq24, eq25 , titleP3 , def31,def32,def33,def34,def35, eq31,eq32,
-        eq33,eq34, eq35  , img1 , img2 , img3)
-                                          VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s'
-                                          ,'%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s',
-                                          '%s','%s','%s','%s','%s','%s','%s',
-                                          '%s','%s','%s','%s','%s','%s','%s')''' % (
-            self.titre.toPlainText() ,self.titrep1.toPlainText() ,
-            self.def11.toPlainText() , self.def12.toPlainText() ,self.def13.toPlainText() , self.def14.toPlainText() ,self.def15.toPlainText(),
-            self.Recouver_Latex(self.eq11.toPlainText()), self.Recouver_Latex(self.eq12.toPlainText()), self.Recouver_Latex(self.eq13.toPlainText()), self.Recouver_Latex(self.eq14.toPlainText()), self.Recouver_Latex(self.eq15.toPlainText()) ,
+        try:
+            file = ('info2.db')
+            self.conn = sqlite3.connect(file)
+            self.cur = self.conn.cursor()
+            self.cur.execute('''INSERT INTO  parti1(title , titleP1
+            ,def11,def12,def13,def14,def15 , eq11,eq12,
+            eq13,eq14, eq15 , titleP2 , def21,def22,def23,def24,def25 ,  eq21,eq22,
+            eq23,eq24, eq25 , titleP3 , def31,def32,def33,def34,def35, eq31,eq32,
+            eq33,eq34, eq35  , img1 , img2 , img3)
+                                              VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s'
+                                              ,'%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s',
+                                              '%s','%s','%s','%s','%s','%s','%s',
+                                              '%s','%s','%s','%s','%s','%s','%s')''' % (
+                self.titre.toPlainText() ,self.titrep1.toPlainText() ,
+                self.def11.toPlainText() , self.def12.toPlainText() ,self.def13.toPlainText() , self.def14.toPlainText() ,self.def15.toPlainText(),
+                self.Recouver_Latex(self.eq11.toPlainText()), self.Recouver_Latex(self.eq12.toPlainText()), self.Recouver_Latex(self.eq13.toPlainText()), self.Recouver_Latex(self.eq14.toPlainText()), self.Recouver_Latex(self.eq15.toPlainText()) ,
 
 
-            self.titrep2.toPlainText() , self.def21.toPlainText(), self.def22.toPlainText(), self.def23.toPlainText(), self.def24.toPlainText(),
-            self.def25.toPlainText(),self.Recouver_Latex(self.eq21.toPlainText()), self.Recouver_Latex(self.eq22.toPlainText()), self.Recouver_Latex(self.eq23.toPlainText()),
-            self.Recouver_Latex(self.eq24.toPlainText()),self.Recouver_Latex(self.eq25.toPlainText()),
+                self.titrep2.toPlainText() , self.def21.toPlainText(), self.def22.toPlainText(), self.def23.toPlainText(), self.def24.toPlainText(),
+                self.def25.toPlainText(),self.Recouver_Latex(self.eq21.toPlainText()), self.Recouver_Latex(self.eq22.toPlainText()), self.Recouver_Latex(self.eq23.toPlainText()),
+                self.Recouver_Latex(self.eq24.toPlainText()),self.Recouver_Latex(self.eq25.toPlainText()),
 
-            self.titrep3.toPlainText() ,
-            self.def31.toPlainText(), self.def32.toPlainText(), self.def33.toPlainText(), self.def34.toPlainText(),self.def35.toPlainText(),
-            self.Recouver_Latex(self.eq31.toPlainText()), self.Recouver_Latex(self.eq32.toPlainText()), self.Recouver_Latex(self.eq33.toPlainText()),
-            self.Recouver_Latex(self.eq34.toPlainText()),  self.Recouver_Latex(self.eq35.toPlainText()), self.img1.toPlainText() , self.img2.toPlainText() , self.img3.toPlainText()
-        ))
-        self.conn.commit()
-        Qt.QMessageBox.information(self, u'صحيت', u'تم اضافة البيانات')
+                self.titrep3.toPlainText() ,
+                self.def31.toPlainText(), self.def32.toPlainText(), self.def33.toPlainText(), self.def34.toPlainText(),self.def35.toPlainText(),
+                self.Recouver_Latex(self.eq31.toPlainText()), self.Recouver_Latex(self.eq32.toPlainText()), self.Recouver_Latex(self.eq33.toPlainText()),
+                self.Recouver_Latex(self.eq34.toPlainText()),  self.Recouver_Latex(self.eq35.toPlainText()), self.img1.toPlainText() , self.img2.toPlainText() , self.img3.toPlainText()
+            ))
+            self.conn.commit()
+            self.conn.close()
+            Qt.QMessageBox.information(self, u'صحيت', u'تم اضافة البيانات')
+
+        except :
+            e = sys.exc_info()[0]
+            print(e)
+
+            Qt.QMessageBox.warning(self, e, u'خطأ غير متوقع')
+
 
     def open_img_1(self):
         save =  Qt.QFileDialog.getOpenFileName(self,caption = 'select img' , directory = "/" , filter = 'AU filles(*.*)')
@@ -127,13 +138,18 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.imgBtn3.clicked.connect(self.open_img_3)
 
     def Button_OK(self):
+
         print('text')
         #self.validati_form_chois()
-        self.add_Date()
+        try :
+            self.add_Date()
+        except :
+            print('hhhhhhhhhhh prblm')
 
+            e = sys.exc_info()[0]
+            print(e)
 
-
-
+            Qt.QMessageBox.warning(self, e, u'خطأ غير متوقع')
 
     def Dilog_erurr(self):
         Qt.QMessageBox.warning(self, u'نسييت واحد فارغ', u'نسيت فراغ')
